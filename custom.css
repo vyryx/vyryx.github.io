@@ -17,3 +17,104 @@
     display: flex;
     gap: 10px
   }
+
+
+  .purple {
+    --color-1: #af40ff;
+    --color-2: #5b42f3;
+    --color-3: #00ddeb;
+}
+
+.pink {
+  --color-1: #ff4099;
+  --color-2: #ca08ba;
+  --color-3: #eb0027;
+}
+
+.red {
+  --color-1: #FF0000;
+  --color-2: #282828;
+  --color-3: #282828;
+}
+
+
+.gray {
+  --color-1: #24292e;
+  --color-2: #2b3137;
+  --color-3: #2b3137;
+}
+
+button {
+    align-items: center;
+    background-image: linear-gradient(144deg, var(--color-1), var(--color-2) 50%, var(--color-3));
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: unset;
+    transition: all 0.3s;
+    transition: box-shadow 0.4s;
+    animation: pop-in 0.5s forwards;
+    animation-fill-mode: backwards;
+  }
+  
+  img {
+    animation: pop-in 0.5s forwards;
+    animation-fill-mode: backwards;
+  }
+
+  button:active,
+  button:hover {
+    outline: 0;
+    box-shadow: var(--color-1) -20px -4px 50px -10px, var(--color-3) 20px 10px 50px -15px;
+    letter-spacing: 2px;
+  }
+  
+  button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  button:hover span {
+    background: none;
+  }
+  
+  button:active {
+    transform: scale(0.9) scaleX(1.2);
+    letter-spacing: 5px;
+    box-shadow: unset;
+  }
+  
+
+  @keyframes pop-in {
+    0% {
+        opacity: 0.1;
+        transform: scale(0.1);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

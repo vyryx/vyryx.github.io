@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>😍😒👌😘😢👀😉😎🤔🤢😆</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    <link rel="stylesheet" href="../custom.css">
-</head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <link rel="stylesheet" href="../custom.css" />
+  </head>
 
-<body>
+  <body>
     <h1>heading</h1>
 
-    <p>
-        <a href="https://www.twitch.tv/vyrx22"> <img src="./ressources/glitch_flat_purple.svg" alt="twitch logo"
-                width="32" height="32"> vyrx22 on twitch</a>
+    <h3>socail links, very pog</h3>
+    <p class="inline">
+      <a href="https://www.twitch.tv/vyrx22" target="_blank">
+        <img
+          src="./ressources/glitch_flat_purple.svg"
+          alt="twitch logo"
+          width="32"
+          height="32"
+      /></a>
+      <button class="purple" onclick="newTab('www.twitch.tv/vyrx22')">
+        <span class="text"> vyrx22 on twitch</span>
+      </button>
+      <span>epic streams</span>
     </p>
 
     <h3>bad games</h3>
-    <p>
-        <a href="https://veiryx.itch.io/"> <img src="./ressources/itchio-logo-white.svg" alt="itch.io logo" width="128">
-            veiryx on itch.io</a> (highly suggest not to play them)
+    <p class="inline">
+      <a href="https://veiryx.itch.io/" target="_blank">
+        <img
+          src="./ressources/itchio-logo-white.svg"
+          alt="itch.io logo"
+          width="128"
+        />
+      </a>
+      <button class="pink" onclick="newTab('veiryx.itch.io')">
+        <span class="text">veiryx on itch.io</span>
+      </button>
+      (highly suggest not to play them)
     </p>
 
     <h3>(no) videos</h3>
-    <p>
-        <a href="https://youtube.com/@veiryx"> <img src="./ressources/yt_icon_mono_dark.png" alt="youtube logo"
-                width="32"> veiryx on youtube</a>
+    <p class="inline">
+      <a href="https://youtube.com/@veiryx" target="_blank">
+        <img
+          src="./ressources/yt_icon_mono_dark.png"
+          alt="youtube logo"
+          width="32"
+        />
+      </a>
+      <button class="red" onclick="newTab('youtube.com/@veiryx')">
+        <span class="text">veiryx on youtube</span>
+      </button>
     </p>
 
     <h3>vibe coded bullshit</h3>
-    <p>(this webpage included)</p>
-    <p>
-        <a href="https://github.com/vyryx"> <img src="./ressources/GitHub_Logo_White.png" alt="youtube logo"
-                width="64"> vyryx on github</a> 
+
+    <p class="inline">
+      <a href="https://github.com/vyryx" target="_blank">
+        <img
+          src="./ressources/GitHub_Logo_White.png"
+          alt="youtube logo"
+          width="64"
+        />
+      </a>
+
+      <button class="gray" onclick="newTab('github.com/vyryx')">
+        <span class="text">vyryx on github</span>
+      </button>
+      <span>(this webpage included)</span>
     </p>
-</body>
-
-
+  </body>
+  <script>
+    function newTab(link = "www.twitch.tv/vyrx22") {
+      window.open("https://" + link, "_blank");
+    }
+  </script>
 </html>

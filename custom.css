@@ -44,7 +44,7 @@
   --color-3: #2b3137;
 }
 
-button {
+button, .fakeButton {
     align-items: center;
     background-image: linear-gradient(144deg, var(--color-1), var(--color-2) 50%, var(--color-3));
     border: 0;
@@ -78,13 +78,14 @@ button {
   }
 
   button:active,
-  button:hover {
+  button:hover, .fakeButton:active, .fakeButton:hover {
     outline: 0;
     box-shadow: var(--color-1) -20px -4px 50px -10px, var(--color-3) 20px 10px 50px -15px;
     letter-spacing: 2px;
   }
   
-  button span {
+  button span, .fakeButton span {
+    color: white;
     background-color: rgb(5, 6, 45);
     padding: 16px 24px;
     border-radius: 6px;
@@ -93,11 +94,11 @@ button {
     transition: 300ms;
   }
   
-  button:hover span {
+  button:hover span, .fakeButton:hover span {
     background: none;
   }
   
-  button:active {
+  button:active, .fakeButton:active {
     transform: scale(0.9) scaleX(1.2);
     letter-spacing: 5px;
     box-shadow: unset;
@@ -117,4 +118,36 @@ button {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+footer {
+  display: flex;
+}
+
+
+.😎Button {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  --var-fill-progress: 0%;
+  background-color: var(--accent-bg);
+}
+
+.😎Button a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 20px;
+  display: block;
+}
+
+.😎Button:hover {
+  --var-fill-progress: 100%;
+}
+
+.😎Bar {
+  height: 2px;
+  background-color: white;
+  width: var(--var-fill-progress);
+  transition: 0.2s;
 }
